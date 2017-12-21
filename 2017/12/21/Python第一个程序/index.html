@@ -1,255 +1,373 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN">
-<!--begin head-->
+<html lang=zh>
 <head>
-    <meta charset="utf-8">
-<!--begin title-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>Python第一个程序 | Hexo</title>
+  <meta name="description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
 
-<title>
+2.
+
+3.
+
+二.输入密码时不显示所输入内容（import getpass）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python第一个程序">
+<meta property="og:url" content="yinghaili.github.io/2017/12/21/Python第一个程序/index.html">
+<meta property="og:site_name" content="Yinghaili">
+<meta property="og:description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
+
+2.
+
+3.
+
+二.输入密码时不显示所输入内容（import getpass）">
+<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195037.png">
+<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195130.png">
+<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195146.png">
+<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_201759.png">
+<meta property="og:updated_time" content="2017-12-21T12:41:10.467Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python第一个程序">
+<meta name="twitter:description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
+
+2.
+
+3.
+
+二.输入密码时不显示所输入内容（import getpass）">
+<meta name="twitter:image" content="yinghaili.github.io/img/2017-12-21_195037.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="yinghaili.github.io/2017/12/21/Python第一个程序/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Yinghaili" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  <!-- font-awesome CSS -->
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  
     
-    Python第一个程序 |
     
-    Yinghaili</title>
-<!--end title-->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!--begin mete-->
 
-<meta name="description" content="千秋万载,一统江湖"/>
-
-<meta name="author" content="李英海"/>
-
-<!--end mete-->
-<!--begin keywords-->
-<meta name="keywords" content="Python第一个程序"/>
-<!--end keywords-->
-<!--begin rss-->
-
-<link rel="alternate" href="/atom.xml" title="Yinghaili" type="application/atom+xml">
-
-<!--end rss-->
-<!--begin favicon-->
-
-<link rel="icon" href="/favicon.ico">
-
-<!--end favicon-->
-<!--begin style-->
-
-<!-- stylesheets list from config.yml -->
-
-<link rel="stylesheet" href="/css/hannah.css">
-
-
-<!--end style-->
 </head>
-<!--end head-->
-<!--begin body-->
-<body class="container-fluid">
 
-<!--begin menu-->
-<div class="hannah-menu">
-    <i class="fh fh-ravelry fa-2x btn fixed-menu animated bounce" id="btn_menu" aria-hidden="true"></i>
-    <div class="menu-outer container-fluid hide animated" id="div_menu">
-        <div class="row" style="margin-bottom: 5px;">
-            
-            <div class="col-md-offset-2 col-md-3 col-xs-4 text-center left-social">
-                
-                <a target="_blank" href="https://github.com/objectyan" title="GitHub"><i class="fh fh-github"></i></a>
-                
-                <style>
-                    .left-social {
-                        height: 132px;
-                        line-height: 132px;
-                        font-size: 66px;
-                    }
 
-                    .left-social * {
-                        color: #f1ce8e;
-                    }
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">昵称</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="fa fa-map-marker"></i> Shenzhen, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
 
-                    @media (max-width: 767px) {
-                        .left-social {
-                            line-height: 132px;
-                            font-size: 33px;
-                        }
-                    }
-                </style>
-            </div>
-            <!--begin handImg-->
-            <div class="col-md-2 col-xs-4 text-center">
-                
-                <img src="/img/logo.jpg" alt="Head Image" class="img-circle">
-                
-            </div>
-            <!--end handImg-->
-            <div class="col-md-3 col-xs-4 text-center right-social">
-                
-                <style>
-                    .right-social {
-                        height: 132px;
-                        line-height: 132px;
-                        font-size: 66px;
-                    }
-
-                    @media (max-width: 767px) {
-                        .right-social {
-                            line-height: 132px;
-                            font-size: 33px;
-                        }
-                    }
-
-                    .right-social * {
-                        color: #f1ce8e;
-                    }
-                </style>
-            </div>
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="fa fa-search"></i></button>
+            </span>
         </div>
-        <div class="row">
-            <div class="menu-content col-md-8 col-md-push-2 col-xs-12 ">
-                <dl class="menu-content-item">
-                    <dt class="menu-content-title">
-                        <i class="fh fh-bars" aria-hidden="true"></i> Menu
-                    </dt>
-                    <dd class="menu-content-content">
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/" class="btn btn-block">
-                                
-                                <i class="fh fh-ravelry"></i>
-                                Home
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/categories" class="btn btn-block">
-                                
-                                <i class="fh fh-cubes"></i>
-                                Category
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/tags" class="btn btn-block">
-                                
-                                <i class="fh fh-tags"></i>
-                                Tag
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/archives" class="btn btn-block">
-                                
-                                <i class="fh fh-archive"></i>
-                                Archives
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/about" class="btn btn-block">
-                                
-                                <i class="fh fh-about"></i>
-                                About
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/doc" class="btn btn-block">
-                                
-                                <i class="fh fh-document"></i>
-                                Doc
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/plug" class="btn btn-block">
-                                
-                                <i class="fh fh-plug"></i>
-                                Plug
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/sitemap" class="btn btn-block">
-                                
-                                <i class="fh fh-sitemap"></i>
-                                SiteMap
-                            </a>
-                        </div>
-                        
-                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
-                            <a href="/atom.xml" class="btn btn-block">
-                                <i class="fh fh-rss" aria-hidden="true"></i> RSS
-                            </a>
-                        </div>
-                    </dd>
-                </dl>
-            </div>
-        </div>
-        <div class="row">
-            <div class="menu-content col-md-8 col-md-offset-2 col-xs-12 ">
-                <dl class="col-md-6 col-xs-6 menu-content-item">
-                    <dt class="menu-content-title">
-                        <i class="fh fh-cubes" aria-hidden="true"></i> Category
-                    </dt>
-                    <dd class="menu-content-content animated zoomIn">
-                        
-                    </dd>
-                </dl>
-                <dl class="col-md-6 col-xs-6 menu-content-item">
-                    <dt class="menu-content-title">
-                        <i class="fh fh-tag" aria-hidden="true"></i> Tags
-                    </dt>
-                    <dd class="menu-content-content animated zoomIn">
-                        
-                    </dd>
-                </dl>
-            </div>
-        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      <!-- <span class="ins-close ins-selectable"><i class="fa fa-times"></i></span> -->
     </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
 </div>
-<!--end menu-->
 
-<div class="row hannah-body">
-    <div class="col-md-8 col-md-push-2 col-xs-12">
-        <!--begin breadcrumb-->
-        <div class="bread-crumb">
-    <ul class="bread-crumb-menu animated rubberBand">
-        <li><a href="/"><i class="fh fh-ravelry" aria-hidden="true"></i> Home</a></li>
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav">
         
-        <li>
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
             
-            <i class="fh fh-newspaper-o" aria-hidden="true"></i>
+            <i class="fa fa-fw fa-dashboard"></i>
             
-            Python第一个程序
+            <span class="menu-title">首页</span>
+          </a>
         </li>
         
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="fa fa-fw fa-delicious"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="fa fa-fw fa-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="fa fa-fw fa-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="fa fa-fw fa-code"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="fa fa-fw fa-leanpub"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="fa fa-fw fa-gg"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="fa fa-fw fa-coffee"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="fa fa-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="fa fa-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="fa fa-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="fa fa-rss"></i></a></li>
+        
     </ul>
-    <div class="bread-crumb-search">
-        <div class="search">
-    <i class="fh fh-search icon-search"></i>
-    <input placeholder="Search ..." onkeyup="searchFunc(this,event,'/search.xml')"
-           class="input-search animated fadeInRight"/>
-    <div class="search-result animated fadeInRight">
-        <a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/21/变量&符编码/">变量&字符编码</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/21/Python第一个程序/">Python第一个程序</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/19/git-md/">git.md</a>
-    </div>
-</div>
-    </div>
-</div>
-        <!--end breadcrumb-->
-        <article class="post animated rollIn">
-    <h1 class="post-title">Python第一个程序</h1>
-    <div class="post-subtitle">
-        
-        <time datetime="2017-12-21T01:59:17.000Z" class="item">
-            <i class="fh fh-calendar" aria-hidden="true"></i>&nbsp;&nbsp;2017-12-21
-        </time>
-        
-        
-        
-    </div>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
-    <p>一.将变量添加到字符串中并以一定的格式打印出来<br>1.</p>
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            
+            <p>您好，您是第<span id="busuanzi_value_site_uv">0</span>位访客</p>
+            
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+
+    
+      
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2017/12/21/变量&符编码/" class="title">变量&amp;字符编码</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-12-21T02:41:14.000Z" itemprop="datePublished">2017-12-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2017/12/21/Python第一个程序/" class="title">Python第一个程序</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-12-21T01:59:17.000Z" itemprop="datePublished">2017-12-21</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2017/12/19/git-md/" class="title">git.md</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2017-12-19T08:38:26.000Z" itemprop="datePublished">2017-12-19</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Python第一个程序" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python第一个程序
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="fa fa-calendar-check-o"></i>
+	<a href="/2017/12/21/Python第一个程序/" class="article-date">
+	  <time datetime="2017-12-21T01:59:17.000Z" itemprop="datePublished">2017-12-21</time>
+	</a>
+</span>
+        
+        
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="fa fa-eye" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="fa fa-commenting-o"></i> <a href="/2017/12/21/Python第一个程序/#comments" class="article-comment-link">评论</a></span>
+        
+      </div>
+      
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <p>一.将变量添加到字符串中并以一定的格式打印出来<br>1.</p>
 <img src="/img/2017-12-21_195037.png">
 <p>2.</p>
 <img src="/img/2017-12-21_195130.png">
@@ -257,65 +375,196 @@
 <img src="/img/2017-12-21_195146.png">
 <p>二.输入密码时不显示所输入内容（import getpass）</p>
 <img src="/img/2017-12-21_201759.png">
-</article>
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="yinghaili.github.io/2017/12/21/Python第一个程序/" title="Python第一个程序" target="_blank" rel="external">yinghaili.github.io/2017/12/21/Python第一个程序/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
-<div class="animated bounceInDown paginations">
-    <div class="col-md-8 col-md-push-2 col-xs-12">
-        <nav>
-            
-            <a href="/2017/12/21/变量&amp;符编码/" class="prev col-md-2 col-xs-4 text-left">&larr; Prev</a>
-            
-            <span class="page-content col-md-8  col-xs-4 text-center">
-                
-            </span>
-            
-            <a href="/2017/12/19/git-md/" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
-            
-        </nav>
-        <div>
-            <div class="col-md-6 col-xs-6 text-left">
-                
-                变量&字符编码
-                
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">昵称</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+       
+    <div id="uyan_frame"></div>
+
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2017/12/21/变量&符编码/" title="变量&amp;字符编码"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;&nbsp;上一篇</a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2017/12/19/git-md/" title="git.md">下一篇&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning hidden-xs" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  
+  
+  <div class="bar-right">
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+  </div>
+  
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-tit">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="donate-payimg">
+            <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+          </div>
+          <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+          <div class="donate-payselect">
+            <div class="pay_item checked" data-id="alipay" data-src="/images/donate/alipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-alipay" value="alipay" checked>
+                <label class="pay_logo clickable" for="input-alipay"><img src="/images/donate/alipay.jpg" alt="支付宝" /></label>
+              </div>
             </div>
-            <div class="col-md-6 col-xs-6 text-right">
-                
-                git.md
-                
+            <div class="pay_item" data-id="weipay" data-src="/images/donate/weipayimg.png">
+              <div class="radio">
+                <input type="radio" name="payment" id="input-weipay" value="weipay">
+                <label class="pay_logo clickable" for="input-weipay"><img src="/images/donate/weipay.jpg" alt="微信支付" /></label>
+              </div>
             </div>
+          </div>
+          <div class="text-grey">
+            <p>扫一扫，即可进行扫码打赏哦</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="fa fa-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="fa fa-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="fa fa-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="fa fa-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="fa fa-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
         </div>
     </div>
-</div>
-
-        <!--begin comments-->
+</footer>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+<script src="/js/plugin.js"></script>
+<script src="/js/application.js"></script>
+  
+    
+    
+    
+        <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+    
+    
         
-<div class="comments" id="comments">
+<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+    
+    
+        
+    
+    <script defer type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=[object Object]"></script>
+
+
+    
     
 
-</div>
 
 
-        <!--end comments-->
-    </div>
-</div>
-
-<!--begin footer-->
-<footer id="footer" class="footer animated fadeInUp hide">
-    <p><i class="copy">&copy;</i> 2017 <a href="yinghaili.github.io">李英海</a> All Right Reserved.</p>
-    <p>Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/objectyan/hexo-theme-hannah">hannah</a></p>
-</footer>
-<!--end footer-->
-
-
-<!-- scripts list from theme config.yml -->
-
-<script src="/js/hannah.js"></script>
-
-
-<!--begin analytics-->
-
-
-<!--end analytics-->
 </body>
-<!--end body-->
 </html>
