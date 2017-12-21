@@ -1,1 +1,135 @@
-pre,.highlight,.gist{background:#333;margin:.5em 0;padding:1em 2%;overflow:auto;color:#ccc;font-size:14px;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;border-style:solid;border-color:#ddd;border-width:1px 0;line-height:20px}code{background:#eee;border:1px solid #d6d6d6;padding:0 5px;margin:0 2px;font-size:90%;text-shadow:0 1px #fff;word-break:break-all;word-wrap:break-word;white-space:normal}.highlight .gutter pre{text-align:left;padding-right:20px;width:100%;color:#666}pre,code{font-family:Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monospace}pre code{background:0;text-shadow:none;padding:0}.highlight pre{border:0;margin:0;padding:0;white-space:pre}.highlight table{margin:0;width:auto}.highlight td{border:0;padding:0}.container .gist .gist-file{border:0;font-family:Menlo,"Bitstream Vera Sans Mono","DejaVu Sans Mono",Monaco,Consolas,monospace;margin:0}.container .gist .gist-file .gist-data{background:0;border:0}.container .gist .gist-file .gist-data .line-numbers{background:0;border:0;padding-right:20px;color:#666;text-align:left}.container .gist .gist-file .gist-data .line-data{padding:0!important}.container .gist .gist-file .highlight{margin:0;padding:0;border:0}.container .gist .gist-file .gist-meta{background:#333;color:#999;font:.85em "Helvetica Neue",Helvetica,Arial,sans-serif;text-shadow:0;padding:0;margin-top:1em;margin-left:20px}.container .gist .gist-file .gist-meta a{color:#258fb8;font-weight:normal}.container .gist .gist-file .gist-meta a:hover{text-decoration:underline}.highlight figcaption{zoom:1;font-size:.85em;color:#999;line-height:1em;margin-bottom:1em}.highlight figcaption:before,.highlight figcaption:after{content:"";display:table}.highlight figcaption:after{clear:both}.highlight figcaption a{float:right}pre .comment,pre .title{color:#999}pre .variable,pre .attribute,pre .tag,pre .regexp,pre .ruby .constant,pre .xml .tag .title,pre .xml .pi,pre .xml .doctype,pre .html .doctype,pre .css .id,pre .css .class,pre .css .pseudo{color:#f2777a}pre .number,pre .preprocessor,pre .built_in,pre .literal,pre .params,pre .constant{color:#f99157}pre .class,pre .ruby .class .title,pre .css .rules .attribute{color:#9c9}pre .string,pre .value,pre .inheritance,pre .header,pre .ruby .symbol,pre .xml .cdata{color:#9c9}pre .css .hexcolor{color:#6cc}pre .function,pre .python .decorator,pre .python .title,pre .ruby .function .title,pre .ruby .title .keyword,pre .perl .sub,pre .javascript .title,pre .coffeescript .title{color:#69c}pre .keyword,pre .javascript .function{color:#c9c}
+/*https://github.com/chriskempson/tomorrow-theme*/
+.post-container pre,
+.post-container .highlight {
+    overflow: auto;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 13px;
+    color: #c5c8c6;
+    background: #1d1f21;
+}
+/*pre, code {
+  font-family: $code-font-family;
+}*/
+/*
+.post-container code {
+  padding: 2px 4px;
+  word-break: break-all;
+  color: $code-foreground;
+  background: $code-background;
+  border-radius: $code-border-radius;
+  font-size $code-font-size;
+}*/
+.post-container pre code {
+    padding: 0;
+    color: #c5c8c6;
+    background: none;
+    text-shadow: none;
+}
+.post-container .highlight pre {
+    border: none;
+    margin: 0;
+    padding: 1px;
+}
+.post-container .highlight table {
+    margin: 0;
+    width: auto;
+    border: none;
+}
+.post-container .highlight td {
+    border: none !important;
+    padding: 0;
+}
+.post-container .highlight figcaption {
+    zoom: 1;
+    font-size: 1em;
+    color: #c5c8c6;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+.post-container .highlight figcaption:before,
+.post-container .highlight figcaption:after {
+    content: "";
+    display: table;
+}
+.post-container .highlight figcaption:after {
+    clear: both;
+}
+.post-container .highlight figcaption a {
+    float: right;
+    color: #c5c8c6;
+}
+.post-container .highlight figcaption a:hover {
+    border-bottom-color: #c5c8c6;
+}
+.post-container .highlight .gutter pre {
+    color: #666;
+    text-align: right;
+    padding-right: 20px;
+}
+.post-container .highlight .line {
+    height: 20px;
+}
+.post-container .gist table {
+    width: auto;
+}
+.post-container .gist table td {
+    border: none;
+}
+.post-container pre .comment {
+    color: #969896;
+}
+.post-container pre .variable,
+.post-container pre .attribute,
+.post-container pre .tag,
+.post-container pre .regexp,
+.post-container pre .ruby .constant,
+.post-container pre .xml .tag .title,
+.post-container pre .xml .pi,
+.post-container pre .xml .doctype,
+.post-container pre .html .doctype,
+.post-container pre .css .id,
+.post-container pre .css .class,
+.post-container pre .css .pseudo {
+    color: #c66;
+}
+.post-container pre .number,
+.post-container pre .preprocessor,
+.post-container pre .built_in,
+.post-container pre .literal,
+.post-container pre .params,
+.post-container pre .constant,
+.post-container pre .command {
+    color: #de935f;
+}
+.post-container pre .ruby .class .title,
+.post-container pre .css .rules .attribute,
+.post-container pre .string,
+.post-container pre .value,
+.post-container pre .inheritance,
+.post-container pre .header,
+.post-container pre .ruby .symbol,
+.post-container pre .xml .cdata,
+.post-container pre .special,
+.post-container pre .number,
+.post-container pre .formula {
+    color: #b5bd68;
+}
+.post-container pre .title,
+.post-container pre .css .hexcolor {
+    color: #8abeb7;
+}
+.post-container pre .function,
+.post-container pre .python .decorator,
+.post-container pre .python .title,
+.post-container pre .ruby .function .title,
+.post-container pre .ruby .title .keyword,
+.post-container pre .perl .sub,
+.post-container pre .javascript .title,
+.post-container pre .coffeescript .title {
+    color: #81a2be;
+}
+.post-container pre .keyword,
+.post-container pre .javascript .function {
+    color: #b294bb;
+}
