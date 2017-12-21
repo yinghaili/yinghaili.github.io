@@ -1,128 +1,255 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<!--begin head-->
 <head>
-  <meta charset="utf-8">
-  
-  <title>Python第一个程序 | Yinghaili</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
+    <meta charset="utf-8">
+<!--begin title-->
 
-2.
+<title>
+    
+    Python第一个程序 |
+    
+    Yinghaili</title>
+<!--end title-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--begin mete-->
 
-3.
+<meta name="description" content="千秋万载,一统江湖"/>
 
-二.输入密码时不显示所输入内容（import getpass）">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python第一个程序">
-<meta property="og:url" content="yinghaili.github.io/2017/12/21/Python第一个程序/index.html">
-<meta property="og:site_name" content="Yinghaili">
-<meta property="og:description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
+<meta name="author" content="李英海"/>
 
-2.
+<!--end mete-->
+<!--begin keywords-->
+<meta name="keywords" content="Python第一个程序"/>
+<!--end keywords-->
+<!--begin rss-->
 
-3.
+<link rel="alternate" href="/atom.xml" title="Yinghaili" type="application/atom+xml">
 
-二.输入密码时不显示所输入内容（import getpass）">
-<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195037.png">
-<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195130.png">
-<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_195146.png">
-<meta property="og:image" content="yinghaili.github.io/img/2017-12-21_201759.png">
-<meta property="og:updated_time" content="2017-12-21T12:41:10.467Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python第一个程序">
-<meta name="twitter:description" content="一.将变量添加到字符串中并以一定的格式打印出来1.
+<!--end rss-->
+<!--begin favicon-->
 
-2.
+<link rel="icon" href="/favicon.ico">
 
-3.
+<!--end favicon-->
+<!--begin style-->
 
-二.输入密码时不显示所输入内容（import getpass）">
-<meta name="twitter:image" content="yinghaili.github.io/img/2017-12-21_195037.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Yinghaili" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/plugin/bganimation/bg.css">
-  
+<!-- stylesheets list from config.yml -->
 
+<link rel="stylesheet" href="/css/hannah.css">
+
+
+<!--end style-->
 </head>
+<!--end head-->
+<!--begin body-->
+<body class="container-fluid">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <div class="outer">
-        <div class="widget-wrap mobile-header">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
-    <h2 class="author">李英海</h2>
-    <h3 class="description">千秋万载,一统江湖</h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
+<!--begin menu-->
+<div class="hannah-menu">
+    <i class="fh fh-ravelry fa-2x btn fixed-menu animated bounce" id="btn_menu" aria-hidden="true"></i>
+    <div class="menu-outer container-fluid hide animated" id="div_menu">
+        <div class="row" style="margin-bottom: 5px;">
+            
+            <div class="col-md-offset-2 col-md-3 col-xs-4 text-center left-social">
+                
+                <a target="_blank" href="https://github.com/objectyan" title="GitHub"><i class="fh fh-github"></i></a>
+                
+                <style>
+                    .left-social {
+                        height: 132px;
+                        line-height: 132px;
+                        font-size: 66px;
+                    }
+
+                    .left-social * {
+                        color: #f1ce8e;
+                    }
+
+                    @media (max-width: 767px) {
+                        .left-social {
+                            line-height: 132px;
+                            font-size: 33px;
+                        }
+                    }
+                </style>
+            </div>
+            <!--begin handImg-->
+            <div class="col-md-2 col-xs-4 text-center">
+                
+                <img src="/img/logo.jpg" alt="Head Image" class="img-circle">
+                
+            </div>
+            <!--end handImg-->
+            <div class="col-md-3 col-xs-4 text-center right-social">
+                
+                <style>
+                    .right-social {
+                        height: 132px;
+                        line-height: 132px;
+                        font-size: 66px;
+                    }
+
+                    @media (max-width: 767px) {
+                        .right-social {
+                            line-height: 132px;
+                            font-size: 33px;
+                        }
+                    }
+
+                    .right-social * {
+                        color: #f1ce8e;
+                    }
+                </style>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-content col-md-8 col-md-push-2 col-xs-12 ">
+                <dl class="menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-bars" aria-hidden="true"></i> Menu
+                    </dt>
+                    <dd class="menu-content-content">
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/" class="btn btn-block">
+                                
+                                <i class="fh fh-ravelry"></i>
+                                Home
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/categories" class="btn btn-block">
+                                
+                                <i class="fh fh-cubes"></i>
+                                Category
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/tags" class="btn btn-block">
+                                
+                                <i class="fh fh-tags"></i>
+                                Tag
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/archives" class="btn btn-block">
+                                
+                                <i class="fh fh-archive"></i>
+                                Archives
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/about" class="btn btn-block">
+                                
+                                <i class="fh fh-about"></i>
+                                About
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/doc" class="btn btn-block">
+                                
+                                <i class="fh fh-document"></i>
+                                Doc
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/plug" class="btn btn-block">
+                                
+                                <i class="fh fh-plug"></i>
+                                Plug
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/sitemap" class="btn btn-block">
+                                
+                                <i class="fh fh-sitemap"></i>
+                                SiteMap
+                            </a>
+                        </div>
+                        
+                        <div class="col-md-4 col-xs-6 col-sm-4 text-center animated tada">
+                            <a href="/atom.xml" class="btn btn-block">
+                                <i class="fh fh-rss" aria-hidden="true"></i> RSS
+                            </a>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-content col-md-8 col-md-offset-2 col-xs-12 ">
+                <dl class="col-md-6 col-xs-6 menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-cubes" aria-hidden="true"></i> Category
+                    </dt>
+                    <dd class="menu-content-content animated zoomIn">
+                        
+                    </dd>
+                </dl>
+                <dl class="col-md-6 col-xs-6 menu-content-item">
+                    <dt class="menu-content-title">
+                        <i class="fh fh-tag" aria-hidden="true"></i> Tags
+                    </dt>
+                    <dd class="menu-content-content animated zoomIn">
+                        
+                    </dd>
+                </dl>
+            </div>
+        </div>
     </div>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
+</div>
+<!--end menu-->
+
+<div class="row hannah-body">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+        <!--begin breadcrumb-->
+        <div class="bread-crumb">
+    <ul class="bread-crumb-menu animated rubberBand">
+        <li><a href="/"><i class="fh fh-ravelry" aria-hidden="true"></i> Home</a></li>
         
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
+        <li>
+            
+            <i class="fh fh-newspaper-o" aria-hidden="true"></i>
+            
+            Python第一个程序
+        </li>
         
     </ul>
-  </div>
+    <div class="bread-crumb-search">
+        <div class="search">
+    <i class="fh fh-search icon-search"></i>
+    <input placeholder="Search ..." onkeyup="searchFunc(this,event,'/search.xml')"
+           class="input-search animated fadeInRight"/>
+    <div class="search-result animated fadeInRight">
+        <a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/21/变量&符编码/">变量&字符编码</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/21/Python第一个程序/">Python第一个程序</a><a class="animated tada col-lg-12 search-result-item result-link" href="/2017/12/19/git-md/">git.md</a>
+    </div>
 </div>
-
-        <section id="main"><article id="post-Python第一个程序" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/12/21/Python第一个程序/" class="article-date">
-  <time class="post-time" datetime="2017-12-21T01:59:17.000Z" itemprop="datePublished">
-    <span class="post-month">12月</span><br/>
-    <span class="post-day">21</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    </div>
+</div>
+        <!--end breadcrumb-->
+        <article class="post animated rollIn">
+    <h1 class="post-title">Python第一个程序</h1>
+    <div class="post-subtitle">
         
-  
-    <h1 class="article-title" itemprop="name">
-      Python第一个程序
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
+        <time datetime="2017-12-21T01:59:17.000Z" class="item">
+            <i class="fh fh-calendar" aria-hidden="true"></i>&nbsp;&nbsp;2017-12-21
+        </time>
+        
+        
+        
+    </div>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一.将变量添加到字符串中并以一定的格式打印出来<br>1.</p>
+    <p>一.将变量添加到字符串中并以一定的格式打印出来<br>1.</p>
 <img src="/img/2017-12-21_195037.png">
 <p>2.</p>
 <img src="/img/2017-12-21_195130.png">
@@ -130,189 +257,65 @@
 <img src="/img/2017-12-21_195146.png">
 <p>二.输入密码时不显示所输入内容（import getpass）</p>
 <img src="/img/2017-12-21_201759.png">
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="yinghaili.github.io/2017/12/21/Python第一个程序/" data-id="cjbgh7wyq0001lsvzleaixe41" class="article-share-link">分享</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/12/21/变量&符编码/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          变量&amp;字符编码
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/12/19/git-md/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">git.md</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <h1 class="blog-title">Yinghaili</h1>
-    <h2 class="blog-subtitle">Madman</h2>
-    <ul class="blog-link">
-     
-          <a href="/" title="Home">
-            <li>主页</li>
-          </a>
-        
-          <a href="/archives" title="Archives">
-            <li>归档</li>
-          </a>
-        
-          <a href="/categories" title="Categories">
-            <li>分类</li>
-          </a>
-        
-          <a href="/tags" title="Tags">
-            <li>标签</li>
-          </a>
-        
-    </ul>
-  </div>
-</div>
-
-  
-    <div class="widget-wrap">
-  <h3 class="widget-title"></h3>
-  <div class="widget">
-    <img class="avatar" src="https://avatars0.githubusercontent.com/u/20333903?v=3&amp;s=460">
-    <h2 class="author">李英海</h2>
-    <h3 class="description">千秋万载,一统江湖</h3>
-    <div class="count-box">
-      <a href="/archives"><div><strong>3</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>0</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>0</strong><br>标签</div></a>
-    </div>
-
-
-
-    <div class="social-link">
-      
-        <a class="hvr-bounce-in" href="http://github.com/ShanaMaid" target="_blank" title="Github">
-          Github
-        </a>
-      
-    </div>
-
-    <div class="friend-link">
-      <h2>友情链接</h2>
-      
-        <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
-          ShanaMaid
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy;2016 - 2017 李英海<br>
-      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
-      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana">Shana</a>
-      
-    </div>
-    
-  </div>
-</footer>
-    </div>
-    
-
-<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
-<script>
-new WOW().init();
-</script>   
-
-
-  <link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
-  <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
-  <script src="/plugin/galmenu/GalMenu.js"></script>
-  <div class="GalMenu GalDropDown">
-      <div class="circle" id="gal">
-        <div class="ring">
-          
-            <a href="/" title="" class="menuItem">首页</a>
-          
-            <a href="/tags" title="" class="menuItem">标签</a>
-          
-            <a href="/categories" title="" class="menuItem">分类</a>
-          
-            <a href="/archives" title="" class="menuItem">归档</a>
-          
-            <a href="/xxxxxxxxx" title="" class="menuItem">xxx</a>
-          
-            <a href="/xxxxxxx" title="" class="menuItem">xxxx</a>
-          
+<div class="animated bounceInDown paginations">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+        <nav>
+            
+            <a href="/2017/12/21/变量&amp;符编码/" class="prev col-md-2 col-xs-4 text-left">&larr; Prev</a>
+            
+            <span class="page-content col-md-8  col-xs-4 text-center">
+                
+            </span>
+            
+            <a href="/2017/12/19/git-md/" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
+            
+        </nav>
+        <div>
+            <div class="col-md-6 col-xs-6 text-left">
+                
+                变量&字符编码
+                
+            </div>
+            <div class="col-md-6 col-xs-6 text-right">
+                
+                git.md
+                
+            </div>
         </div>
-        
-          <audio id="audio" src="#"></audio>
-        
-      </div> 
+    </div>
 </div>
-<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
-  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
-    for (var i = 0,
-    l = items.length; i < l; i++) {
-      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
-      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
-    }</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('body').GalMenu({
-      'menu': 'GalDropDown'
-    })
-  });
-</script>
 
-  <section class="hidden-xs"> 
-  <ul class="cb-slideshow"> 
-    <li><span>苟利</span></li> 
-    <li><span>国家</span></li> 
-    <li><span>生死以</span></li> 
-    <li><span>岂能</span></li> 
-    <li><span>祸福</span></li> 
-    <li><span>趋避之</span></li> 
-  </ul>
-</section>
-<script src="/js/script.js"></script>
+        <!--begin comments-->
+        
+<div class="comments" id="comments">
+    
+
+</div>
 
 
+        <!--end comments-->
+    </div>
+</div>
 
-  </div>
+<!--begin footer-->
+<footer id="footer" class="footer animated fadeInUp hide">
+    <p><i class="copy">&copy;</i> 2017 <a href="yinghaili.github.io">李英海</a> All Right Reserved.</p>
+    <p>Powered by <a href="http://hexo.io">Hexo</a>. Theme by <a href="https://github.com/objectyan/hexo-theme-hannah">hannah</a></p>
+</footer>
+<!--end footer-->
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/hannah.js"></script>
+
+
+<!--begin analytics-->
+
+
+<!--end analytics-->
 </body>
+<!--end body-->
 </html>
